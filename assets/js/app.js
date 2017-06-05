@@ -45,6 +45,7 @@ var cargarPagina = function(){
 	}
     
     imprimir(lugares);
+    $("#busqueda").submit(filtrarLugares);
 };
 
 var plantilla = '<div class="row card">' +
@@ -92,7 +93,16 @@ var mostrarMapa = function (coordenadas) {
       position: coordenadas,
       map: map
     });
-}
+};
+
+var filtrarLugares = function (e) {
+	e.preventDefault();
+	var criterioBusqueda = $("#buscar").val().toLowerCase();
+	var lugaresFiltrados = lugares.filter(function (lugar) {
+		return lugar.nombre.toLowerCase().indexOf(criterioBusqueda) >= 0;
+	});
+	imprimir(lugaresFiltrados);
+};
 
 
 $(document).ready(cargarPagina);
