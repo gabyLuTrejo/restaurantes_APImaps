@@ -1,0 +1,8 @@
+ body .container .margin-bottom { margin-bottom: 0px; }
+
+.map-size { height: 250px;}
+
+.cards-content {
+    padding: 2%;
+    border-radius: 0 0 2px 2px
+}
