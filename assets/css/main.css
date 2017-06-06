@@ -1,6 +1,6 @@
  body .container .margin-bottom { margin-bottom: 0px; }
 
-.map-size { height: 250px;}
+.map-size { height: 40vh;}
 
 .ubicacion-mapa { cursor: pointer; }
 

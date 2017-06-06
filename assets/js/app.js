@@ -2,35 +2,35 @@ var lugares = [
 	{
 		"nombre": "Fonda Fina",
 		"coords": {"latitude": 19.418089,"longitude": -99.166342},
-		"foto": "http://via.placeholder.com/550x550",
+		"foto": "https://www.priceless.com/content/dam/priceless/offers/2016/07/1/9145/logo/1/Mechant_Logo.jpg",
         "direccion": "Medellín 79, Roma Nte., 06700 CDMX"
 	},
     
     {
 		"nombre": "Chuchito Pérez",
 		"coords": {"latitude": 19.420119,"longitude": -99.165543},
-		"foto": "http://via.placeholder.com/550x550",
+		"foto": "https://www.priceless.com/content/dam/priceless/offers/2015/04/2/2665/logo/1/chuchito_Mechant_Logo%20(2).jpg",
         "direccion": "Durango 187, Cuauhtémoc, Roma Nte., 06700 CDM"
 	},
     
     {
 		"nombre": "La Tecla",
 		"coords": {"latitude": 19.419832,"longitude": -99.165531},
-		"foto": "http://via.placeholder.com/550x550",
+		"foto": "https://www.queremoscomer.rest/img/logos/Logo_tecla_57506587a00ec.png",
         "direccion": "Durango 186, Cuauhtémoc, Roma Norte, Roma Nte., 06700 CDMX"
 	},
     
     {
 		"nombre": "Rosetta",
 		"coords": {"latitude": 19.419867, "longitude": -99.159831},
-		"foto": "http://via.placeholder.com/550x550",
+		"foto": "http://acuyo.mx/wp-content/uploads/2016/03/Rosetta_C.png",
         "direccion": "Calle Colima, 166, Delegación Cuauhtémoc, Col. Roma Norte, Roma Nte., 06700 CDMX"
 	},
     
     {
 		"nombre": "Papa Guapa",
 		"coords": {"latitude": 19.419009,"longitude": -99.166946},
-		"foto": "http://via.placeholder.com/550x550",
+		"foto": "http://papaguapa.com/images/papa_logo1.png",
         "direccion": "Av Oaxaca 80, Cuauhtemoc, Roma Norte, Roma Nte., 06700 CDMX"
 	},
 ];
