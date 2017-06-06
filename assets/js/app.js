@@ -45,7 +45,7 @@ var cargarPagina = function(){
 	}
     
     imprimir(lugares);
-    $("#busqueda").submit(filtrarLugares);
+    $("#busqueda").keyup(filtrarLugares);
     $(".ubicacion-mapa").click(coordenadasLugar);
 };
 
