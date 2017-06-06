@@ -2,6 +2,8 @@
 
 .map-size { height: 250px;}
 
+.ubicacion-mapa { cursor: pointer; }
+
 .cards-content {
     padding: 2%;
     border-radius: 0 0 2px 2px
