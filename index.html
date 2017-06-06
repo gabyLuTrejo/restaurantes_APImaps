@@ -25,11 +25,51 @@
                 </div>
             </form>
         </div>
+        <div class="fixed-action-btn horizontal">
+            <a class="btn-floating btn-large waves-effect waves-light  pink darken-4" href="#modalRestaurantes">
+            <i class="material-icons">add</i>
+        </a>
+        </div>
         <section class="restaurantes">
             
         </section> 
-
+        
+        <div id="modalRestaurantes" class="modal">
+            <div class="modal-content">
+                <h5>Ingresa un Restaurante</h5> 
+                <form>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="nombreRestaurante" type="text" class="validate">
+                            <label for="nombreRestaurante">Nombre del Restaurante</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="direccionRestaurante" type="text" class="validate">
+                            <label for="direccionRestaurante">Dirección del Restaurante</label>
+                        </div>
+                    </div>  
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn modal-action modal-close waves-effect pink darken-3 left" type="button">
+                    <i class="material-icons right tiny">phonelink_erase</i>
+                </button>                
+                <button class="btn waves-effect pink darken-3" type="submit" name="action">Agregar
+                    <i class="material-icons right tiny">send</i>
+                </button>
+            </div>
+        </div>
+        
     </section>
+    <footer class="page-footer pink darken-4">
+       <div class="footer-copyright">
+           <div class="container">
+              <span class="grey-text text-lghten-5">© 2014 Copyright Text</span><a class="grey-text text-lighten-4 right" href="#!">Gaby Trejo</a>
+           </div>
+       </div>
+    </footer>
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?AIzaSyAJh_MbArM1_l0J7Ipt7aiD2Xam-4LU-pM"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

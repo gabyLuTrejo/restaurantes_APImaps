@@ -2,40 +2,45 @@ var lugares = [
 	{
 		"nombre": "Fonda Fina",
 		"coords": {"latitude": 19.418089,"longitude": -99.166342},
-		"foto": "http://via.placeholder.com/550x550",
-        "direccion": "Medellín 79, Roma Nte., 06700 CDMX"
+		"foto": "https://www.priceless.com/content/dam/priceless/offers/2016/07/1/9145/logo/1/Mechant_Logo.jpg",
+        "direccion": "Medellín 79, Roma Nte., 06700 CDMX",
+        "indice" : 0
 	},
     
     {
 		"nombre": "Chuchito Pérez",
 		"coords": {"latitude": 19.420119,"longitude": -99.165543},
-		"foto": "http://via.placeholder.com/550x550",
-        "direccion": "Durango 187, Cuauhtémoc, Roma Nte., 06700 CDM"
+		"foto": "https://www.priceless.com/content/dam/priceless/offers/2015/04/2/2665/logo/1/chuchito_Mechant_Logo%20(2).jpg",
+        "direccion": "Durango 187, Cuauhtémoc, Roma Nte., 06700 CDM",
+        "indice" : 1
 	},
     
     {
 		"nombre": "La Tecla",
 		"coords": {"latitude": 19.419832,"longitude": -99.165531},
-		"foto": "http://via.placeholder.com/550x550",
-        "direccion": "Durango 186, Cuauhtémoc, Roma Norte, Roma Nte., 06700 CDMX"
+		"foto": "https://www.queremoscomer.rest/img/logos/Logo_tecla_57506587a00ec.png",
+        "direccion": "Durango 186, Cuauhtémoc, Roma Norte, Roma Nte., 06700 CDMX",
+        "indice" : 2
 	},
     
     {
 		"nombre": "Rosetta",
 		"coords": {"latitude": 19.419867, "longitude": -99.159831},
-		"foto": "http://via.placeholder.com/550x550",
-        "direccion": "Calle Colima, 166, Delegación Cuauhtémoc, Col. Roma Norte, Roma Nte., 06700 CDMX"
+		"foto": "http://acuyo.mx/wp-content/uploads/2016/03/Rosetta_C.png",
+        "direccion": "Calle Colima, 166, Delegación Cuauhtémoc, Col. Roma Norte, Roma Nte., 06700 CDMX", 
+        "indice" : 3
 	},
     
     {
 		"nombre": "Papa Guapa",
 		"coords": {"latitude": 19.419009,"longitude": -99.166946},
-		"foto": "http://via.placeholder.com/550x550",
-        "direccion": "Av Oaxaca 80, Cuauhtemoc, Roma Norte, Roma Nte., 06700 CDMX"
+		"foto": "http://papaguapa.com/images/papa_logo1.png",
+        "direccion": "Av Oaxaca 80, Cuauhtemoc, Roma Norte, Roma Nte., 06700 CDMX",
+        "indice" : 4
 	},
 ];
 
-
+var indiceRestaurantes = 4;
 
 var cargarPagina = function(){
     if (navigator.geolocation) {
@@ -44,10 +49,14 @@ var cargarPagina = function(){
 		alert("Actualice su navegador");
 	}
     
+    $('.modal').modal();
     imprimir(lugares);
-    $("#busqueda").submit(filtrarLugares);
-    $(".ubicacion-mapa").click(coordenadasLugar);
+    $("#busqueda").keyup(filtrarLugares);
+    //$(".ubicacion-mapa").click(coordenadasLugar);
+    $(document).on("click", ".ubicacion-mapa", coordenadasLugar);
+    $("#modalRestaurantes").submit(nuevoRestaurante);
 };
+
 
 var plantilla = '<div class="row card">' +
             '<div class="purple lighten-5 cards-content">' +
@@ -66,8 +75,8 @@ var plantilla = '<div class="row card">' +
 
 var imprimir = function (lugares) {
 	var plantillaFinal = "";
-	lugares.forEach(function (lugar, indice) {
-		plantillaFinal += plantilla.replace("__indice__", indice)
+	lugares.forEach(function (lugar) {
+		plantillaFinal += plantilla.replace("__indice__", lugar.indice)
             .replace("__nombre__", lugar.nombre)
 			.replace("__numero__", lugar.numero)
 			.replace("__foto__", lugar.foto)
@@ -113,6 +122,12 @@ var coordenadasLugar = function(){
 		lng: lugares[indice].coords.longitude
 	};
     mostrarMapa(coordenadas);
+};
+
+var nuevoRestaurante = function(){
+    indiceRestaurantes++;
+    lugares[indiceRestaurantes].nombre = $("#nombreRestaurante").val();
+    console.log(lugares[indiceRestaurantes].nombre);
 };
 
 
